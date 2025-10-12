@@ -1,0 +1,353 @@
+/* ========================================
+   1. Global Reset & Base Styles
+======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #121212;
+  color: #eaeaea;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* ========================================
+   2. Header & Navigation
+======================================== */
+header {
+  background: #1b1b1b;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.5);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav ul li a {
+  color: #eaeaea;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: #00e676;
+  transform: scale(1.1);
+}
+
+/* ========================================
+   3. Hero / Home Section
+======================================== */
+#home {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #181818, #242424);
+}
+
+#home h1#greeting {
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  color: #00e676;
+}
+
+/* ========================================
+   4. Profile & Details
+======================================== */
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.details-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+  text-align: left;
+}
+
+.details h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.details .title {
+  font-size: 1.2rem;
+  color: #9e9e9e;
+  margin-bottom: 1rem;
+}
+
+.profile-image {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #00e676;
+  box-shadow: 0 0 20px rgba(0, 230, 118, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+/* ========================================
+   5. Tech Icons
+======================================== */
+.tech-icons {
+  margin: 1rem 0;
+  font-size: 1.9rem;
+}
+
+.tech-icons i {
+  margin: 0 0.6rem;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Icon Colors */
+.fa-html5 { color: #e34c26; }
+.fa-css3-alt { color: #264de4; }
+.fa-js { color: #f7df1e; }
+.fa-react { color: #61dbfb; }
+.fa-code { color: #00bfa6; }
+
+.tech-icons i:hover {
+  transform: scale(1.3);
+  color: #fff;
+  text-shadow: 0 0 10px #00e676;
+}
+
+/* Links */
+#email-card a {
+  color: #00e676;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+#email-card a:hover {
+  text-decoration: underline;
+}
+
+.linkedin-link {
+  color: #0A66C2;
+  text-decoration: underline;
+  font-family: 'Arial', sans-serif;
+}
+
+/* ========================================
+   6. Section Base Styles
+======================================== */
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #00e676;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 0.8rem auto 0;
+  background: #00bfa6;
+  border-radius: 3px;
+}
+
+/* ========================================
+   7. About Section
+======================================== */
+#about p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  color: #d1d1d1;
+}
+
+/* ========================================
+   8. Skills Section
+======================================== */
+#skills ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  text-align: center;
+}
+
+#skills li {
+  background: #1f1f1f;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#skills li:hover {
+  background: #00bfa6;
+  color: #fff;
+  transform: translateY(-6px);
+  box-shadow: 0 5px 15px rgba(0, 191, 166, 0.5);
+}
+
+/* ========================================
+   9. Projects Section
+======================================== */
+.project {
+  background: #1f1f1f;
+  padding: 1.8rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 230, 118, 0.4);
+}
+
+.project h3 {
+  color: #00bfa6;
+  margin-bottom: 0.8rem;
+}
+
+/* ========================================
+   10. Contact Section
+======================================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #1f1f1f;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+input,
+textarea {
+  padding: 0.9rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #2a2a2a;
+  color: #fff;
+  resize: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #00e676;
+  box-shadow: 0 0 8px rgba(0, 230, 118, 0.6);
+}
+
+button {
+  background: #00e676;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #00c853;
+  transform: scale(1.05);
+}
+
+/* ========================================
+   11. Footer
+======================================== */
+footer {
+  text-align: center;
+  background: #1a1a1a;
+  padding: 2.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+}
+
+footer p {
+  margin-bottom: 0.8rem;
+  color: #bdbdbd;
+}
+
+footer .social-links a {
+  color: #00e676;
+  margin: 0 0.6rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+  color: #00bfa6;
+  text-decoration: underline;
+}
+
+/* ========================================
+   12. Responsive Adjustments
+======================================== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .details {
+    flex-direction: column;
+  }
+
+  .details-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  #home h1#greeting {
+    font-size: 1.7rem;
+  }
+
+  .details h1 {
+    font-size: 1.4rem;
+  }
+}
