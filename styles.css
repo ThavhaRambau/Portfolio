@@ -97,12 +97,16 @@ nav ul li a:hover {
 }
 
 .profile-image {
-  width: 230px;
-  height: 230px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #00e676;
-  box-shadow: 0 0 20px rgba(0, 230, 118, 0.4);
+  border: 2px solid #ffffff;
+  box-shadow:
+  0 0 15px rgba(240, 148, 51, 0.5),
+  0 0 25px rgba(220, 39, 67, 0.4),
+  0 0 35px rgba(188, 24, 136, 0.3);
+
   transition: transform 0.3s ease;
 }
 
@@ -149,9 +153,19 @@ nav ul li a:hover {
 
 .linkedin-link {
   color: #0A66C2;
-  text-decoration: underline;
+  text-decoration: none;
   font-family: 'Arial', sans-serif;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.4s ease;
 }
+
+.linkedin-link:hover {
+  color: #5ca9ff; /* lighter blue shade */
+  text-shadow: 0 0 8px rgba(92, 169, 255, 0.6), 
+               0 0 15px rgba(92, 169, 255, 0.4),
+               0 0 25px rgba(92, 169, 255, 0.2);
+}
+
 
 /* ========================================
    6. Section Base Styles
@@ -239,6 +253,51 @@ section h2::after {
 }
 
 /* ========================================
+   9.5 Certifications Section
+======================================== */
+#certifications {
+  text-align: center;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.cert-card {
+  background: #1f1f1f;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 230, 118, 0.15);
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 230, 118, 0.4);
+}
+
+.cert-card i {
+  font-size: 2.5rem;
+  color: #00e676;
+  margin-bottom: 1rem;
+}
+
+.cert-card h3 {
+  font-size: 1.2rem;
+  color: #00bfa6;
+  margin-bottom: 0.8rem;
+}
+
+.cert-card p {
+  color: #d1d1d1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ========================================
    10. Contact Section
 ======================================== */
 form {
@@ -321,7 +380,7 @@ footer .social-links a:hover {
 }
 
 /* ========================================
-   12. Responsive Adjustments
+   12. Responsive Adjustments (Corrected)
 ======================================== */
 @media (max-width: 768px) {
   nav ul {
@@ -338,9 +397,10 @@ footer .social-links a:hover {
     text-align: center;
   }
 
+  /* ✅ Fixed: smaller image on small screens */
   .profile-image {
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
   }
 
   #home h1#greeting {
