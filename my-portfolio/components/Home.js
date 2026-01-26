@@ -4,7 +4,7 @@ export default function Home() {
       <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">Hi there, welcome to my portfolio</h1>
       <div className="flex flex-col md:flex-row items-center justify-center gap-8">
         <img
-          src="/WhatsApp Image 2025-06-11 at 03.40.38_c2754ed4.jpg"
+        src = "my-portfolio\public\WhatsApp Image 2025-06-11 at 03.40.38_c2754ed4.jpg"
           alt="Portrait of Thavha Rambau"
           className="w-48 h-48 rounded-full object-cover shadow-lg"
         />
