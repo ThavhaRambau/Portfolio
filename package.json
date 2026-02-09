@@ -16,10 +16,5 @@
     "tailwindcss": "latest",
     "postcss": "latest",
     "autoprefixer": "latest"
-  },
-  "description": "",
-  "main": "next.config.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }
