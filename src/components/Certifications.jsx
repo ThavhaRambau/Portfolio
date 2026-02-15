@@ -1,6 +1,6 @@
 export default function Certifications() {
   return (
-    <section id="certifications" className="p-8 bg-gray-100">
+    <section id="certifications" className="p-8 bg-gray-100" data-aos="fade-up">
       <h2 className="text-2xl font-bold mb-4">Certifications</h2>
       <div className="grid md:grid-cols-3 gap-6">
         <div className="p-4 border rounded shadow">
@@ -17,5 +17,5 @@ export default function Certifications() {
         </div>
       </div>
     </section>
-  );
+  )
 }

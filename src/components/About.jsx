@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="p-8 bg-gray-100">
+    <section id="about" className="p-8 bg-gray-100" data-aos="fade-up">
       <h2 className="text-2xl font-bold mb-4">About Me</h2>
       <p>
         I am a graduate in Information Technology, with a strong academic foundation in Programming,
@@ -11,5 +11,5 @@ export default function About() {
         I also gained leadership and teamwork experience managing a football team during university.
       </p>
     </section>
-  );
+  )
 }
