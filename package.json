@@ -13,8 +13,9 @@
     "react-dom": "latest"
   },
   "devDependencies": {
-    "tailwindcss": "latest",
+    "autoprefixer": "latest",
     "postcss": "latest",
-    "autoprefixer": "latest"
+    "rimraf": "^6.1.2",
+    "tailwindcss": "latest"
   }
 }
