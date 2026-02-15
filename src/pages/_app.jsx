@@ -2,7 +2,8 @@ import '../styles/globals.css'
 import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { Analytics } from '@vercel/analytics/react' // ✅ Import Analytics
+import { Analytics } from '@vercel/analytics/react'       // ✅ Analytics
+import { SpeedInsights } from '@vercel/speed-insights/next' // ✅ Speed Insights
 
 export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -15,7 +16,8 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Component {...pageProps} />
-      <Analytics /> {/* ✅ Add Analytics here */}
+      <Analytics />       {/* Tracks visitors */}
+      <SpeedInsights />   {/* Tracks performance metrics */}
     </>
   )
 }
