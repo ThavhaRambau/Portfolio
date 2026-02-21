@@ -23,24 +23,40 @@ export default function Projects() {
   ]
 
   return (
-    <section id="projects" className="p-8 bg-gray-100" data-aos="fade-up">
-      <h2 className="text-2xl font-bold mb-6 text-center">Projects</h2>
-      <div className="grid md:grid-cols-3 gap-6">
-        {projects.map((project, index) => (
-          <div key={index} className="p-4 border rounded-lg shadow hover:shadow-lg transition bg-white">
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={400}
-                height={250}
-                className="rounded-lg"
-              />
-              <h3 className="mt-4 font-semibold text-lg">{project.title}</h3>
-              <p className="text-sm text-gray-600 mt-2">{project.description}</p>
-            </a>
-          </div>
-        ))}
+    <section id="projects" className="py-16 bg-gray-50" data-aos="fade-up">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">Projects</h2>
+        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          A showcase of my work in web development, cloud infrastructure, and AI.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <div 
+              key={index} 
+              className="bg-white rounded-lg shadow hover:shadow-xl transition transform hover:-translate-y-1"
+            >
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={400}
+                  height={250}
+                  className="rounded-t-lg"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-800">{project.title}</h3>
+                  <p className="text-gray-600 mt-2">{project.description}</p>
+                  <button 
+                    className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                  >
+                    View Project
+                  </button>
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
