@@ -4,55 +4,56 @@ export default function Projects() {
   const projects = [
     {
       title: "Portfolio Website",
-      description: "A personal portfolio built with Next.js, Tailwind CSS, and deployed on Vercel.",
+      description: "A responsive personal portfolio built with React, Tailwind CSS, and Next.js.",
       image: "/images/portfolio.png",
-      link: "https://portfolio.vercel.app"
-    },
-    {
-      title: "E-Commerce Store",
-      description: "A full-stack e-commerce application with product listings, cart, and checkout.",
-      image: "/images/ecommerce.png",
-      link: "https://github.com/ThavhaRambau/ecommerce"
+      link: "https://portfolio.vercel.app",
     },
     {
       title: "AI Chatbot",
-      description: "An AI-powered chatbot integrated with cloud infrastructure for scalability.",
+      description: "An intelligent chatbot powered by OpenAI, deployed on the cloud.",
       image: "/images/chatbot.png",
-      link: "https://github.com/ThavhaRambau/ai-chatbot"
-    }
+      link: "https://github.com/thavha/chatbot",
+    },
+    {
+      title: "E-commerce Platform",
+      description: "A fullstack e-commerce site with product listings, cart, and checkout.",
+      image: "/images/ecommerce.png",
+      link: "https://github.com/thavha/ecommerce",
+    },
   ]
 
   return (
-    <section id="projects" className="py-16 bg-gray-50" data-aos="fade-up">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">Projects</h2>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          A showcase of my work in web development, cloud infrastructure, and AI.
+    <section id="projects" className="py-16 bg-background" data-aos="fade-up">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        <h2 className="text-3xl font-bold text-text mb-8">Projects</h2>
+        <p className="text-text mb-6">
+          Real-world applications that demonstrate my ability to build, deploy, and scale software solutions.
         </p>
 
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-lg shadow hover:shadow-xl transition transform hover:-translate-y-1"
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow hover:shadow-xl transition transform hover:-translate-y-1 p-4 text-left border border-transparent hover:border-primary"
             >
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <div className="mb-4">
                 <Image
                   src={project.image}
                   alt={project.title}
                   width={400}
                   height={250}
-                  className="rounded-t-lg"
+                  className="rounded"
                 />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-800">{project.title}</h3>
-                  <p className="text-gray-600 mt-2">{project.description}</p>
-                  <button 
-                    className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-                  >
-                    View Project
-                  </button>
-                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-primary mb-2">{project.title}</h3>
+              <p className="text-text mb-4">{project.description}</p>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-4 py-2 bg-primary text-white rounded hover:bg-accent transition"
+              >
+                View Project
               </a>
             </div>
           ))}

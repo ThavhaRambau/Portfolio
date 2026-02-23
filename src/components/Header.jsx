@@ -4,7 +4,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="bg-gray-900 text-white fixed w-full top-0 z-50 shadow">
+    <header className="bg-primary text-white fixed w-full top-0 z-50 shadow">
       <nav className="flex items-center justify-between max-w-6xl mx-auto p-4">
         
         {/* Logo / Name */}
@@ -12,12 +12,12 @@ export default function Header() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6">
-          <li><a href="#home" className="hover:text-blue-400 transition">Home</a></li>
-          <li><a href="#about" className="hover:text-blue-400 transition">About</a></li>
-          <li><a href="#skills" className="hover:text-blue-400 transition">Skills</a></li>
-          <li><a href="#certifications" className="hover:text-blue-400 transition">Certifications</a></li>
-          <li><a href="#projects" className="hover:text-blue-400 transition">Projects</a></li>
-          <li><a href="#contact" className="hover:text-blue-400 transition">Contact</a></li>
+          <li><a href="#home" className="hover:text-accent transition">Home</a></li>
+          <li><a href="#about" className="hover:text-accent transition">About</a></li>
+          <li><a href="#skills" className="hover:text-accent transition">Skills</a></li>
+          <li><a href="#certifications" className="hover:text-accent transition">Certifications</a></li>
+          <li><a href="#projects" className="hover:text-accent transition">Projects</a></li>
+          <li><a href="#contact" className="hover:text-accent transition">Contact</a></li>
         </ul>
 
         {/* Mobile Hamburger */}
@@ -39,13 +39,13 @@ export default function Header() {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <ul className="flex flex-col gap-4 mt-4 bg-gray-800 p-4 md:hidden">
-          <li><a href="#home" className="hover:text-blue-400 transition">Home</a></li>
-          <li><a href="#about" className="hover:text-blue-400 transition">About</a></li>
-          <li><a href="#skills" className="hover:text-blue-400 transition">Skills</a></li>
-          <li><a href="#certifications" className="hover:text-blue-400 transition">Certifications</a></li>
-          <li><a href="#projects" className="hover:text-blue-400 transition">Projects</a></li>
-          <li><a href="#contact" className="hover:text-blue-400 transition">Contact</a></li>
+        <ul className="flex flex-col gap-4 mt-4 bg-background p-4 md:hidden">
+          <li><a href="#home" className="hover:text-primary transition">Home</a></li>
+          <li><a href="#about" className="hover:text-primary transition">About</a></li>
+          <li><a href="#skills" className="hover:text-primary transition">Skills</a></li>
+          <li><a href="#certifications" className="hover:text-primary transition">Certifications</a></li>
+          <li><a href="#projects" className="hover:text-primary transition">Projects</a></li>
+          <li><a href="#contact" className="hover:text-primary transition">Contact</a></li>
         </ul>
       )}
     </header>
