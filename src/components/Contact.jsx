@@ -7,20 +7,31 @@ export default function Contact() {
           Feel free to reach out for collaboration, questions, or just to say hello.
         </p>
 
-        <form className="space-y-4">
+        {/* Formspree integration */}
+        <form
+          action="https://formspree.io/f/xovkpvka"
+          method="POST"
+          className="space-y-4"
+        >
           <input
             type="text"
+            name="name"
             placeholder="Your Name"
+            required
             className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-primary"
           />
           <input
             type="email"
+            name="email"
             placeholder="Your Email"
+            required
             className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-primary"
           />
           <textarea
+            name="message"
             rows="5"
             placeholder="Your Message"
+            required
             className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-primary"
           ></textarea>
           <button
