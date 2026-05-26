@@ -37,11 +37,21 @@ form.addEventListener("submit", function(event) {
 
 // Mobile menu toggle
  const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
+const navLinks = document.getElementById("nav-links");
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    // Animate hamburger into "X"
-    menuToggle.classList.toggle("open");
+// Toggle menu when hamburger is clicked
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  menuToggle.classList.toggle("open");
+});
+
+// Close menu when a nav link is clicked
+const links = navLinks.querySelectorAll("a");
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    menuToggle.classList.remove("open");
   });
+});
+
 
