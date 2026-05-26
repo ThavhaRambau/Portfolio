@@ -277,25 +277,55 @@ section h2::after {
 }
 
 /* ========================================
-   9.5 Certifications Section
+   Certifications Horizontal Layout with Snap
 ======================================== */
-#certifications {
-  text-align: center;
+.cert-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1.5rem;
+  flex-wrap: nowrap;          /* keep items in one line */
+  overflow-x: auto;           /* enable horizontal scroll */
+  padding-bottom: 1rem;
+  scrollbar-width: thin;      /* Firefox */
+  scrollbar-color: #00e676 #1b1b1b;
+
+  /* Snap settings */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
 }
 
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+.cert-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.cert-grid::-webkit-scrollbar-track {
+  background: #1b1b1b;
+  border-radius: 4px;
+}
+
+.cert-grid::-webkit-scrollbar-thumb {
+  background: #00e676;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.cert-grid::-webkit-scrollbar-thumb:hover {
+  background: #00c853;
 }
 
 .cert-card {
+  flex: 0 0 220px;            /* fixed width for each card */
   background: #1f1f1f;
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 15px rgba(0, 230, 118, 0.15);
+
+  /* Snap alignment */
+  scroll-snap-align: start;
 }
 
 .cert-card:hover {
@@ -308,11 +338,13 @@ section h2::after {
   color: #00e676;
   margin-bottom: 1rem;
 }
+
 .cert-card h3 {
   font-size: 1.2rem;
   color: #00bfa6;
   margin-bottom: 0.5rem;
 }
+
 /* ========================================
    10. Contact Section
 ======================================== */
@@ -435,5 +467,39 @@ button:hover {
 @keyframes fadeOut {
   from { opacity: 1; transform: translateY(0); }
   to   { opacity: 0; transform: translateY(10px); }
+}
+/* ========================================
+   11. Footer
+======================================== */
+footer {
+  background: #1b1b1b;
+  color: #eaeaea;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  border-top: 1px solid #333;
+}
+
+footer p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #9e9e9e;
+}
+
+footer .social-links {
+  margin-top: 0.5rem;
+}
+
+footer .social-links a {
+  color: #00e676;
+  text-decoration: none;
+  margin: 0 0.6rem;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer .social-links a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0, 230, 118, 0.6);
 }
 
