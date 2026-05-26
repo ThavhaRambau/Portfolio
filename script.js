@@ -34,3 +34,14 @@ form.addEventListener("submit", function(event) {
     alert("Error submitting form. Please try again later.");
   });
 });
+
+// Mobile menu toggle
+ const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    // Animate hamburger into "X"
+    menuToggle.classList.toggle("open");
+  });
+
