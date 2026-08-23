@@ -1,0 +1,8 @@
+services:
+  - type: static              # Tells Render this is a static site (HTML/CSS/JS only)
+    name: portfolio           # The name of your service on Render (can be anything)
+    env: static               # Environment type is static (no Node runtime)
+    buildCommand: ""          # Empty because you don’t need npm or a build step
+    publishDir: .             # The dot (.) means “repo root” → where index.html lives
+    autoDeploy: true          # Automatically redeploy when you push to GitHub
+    
